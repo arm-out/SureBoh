@@ -13,31 +13,5 @@ def grab_df1():
     pickle.dump(df, pickle_out)
     pickle_out.close()
 
-'''
-def grab_df2():
-    #grabbing dataset2
-    df = pd.read_csv("Data/fake.csv")
-
-    l = []
-    for i in range(len(df.text)):
-        l.append(len(str(df.text[i])))
-
-    l = pd.DataFrame(l)
-    df['textlen'] = l
-
-    df = df[df.language == 'english']
-    df = df[(df.textlen > 500) & (df.textlen < 12000)]
-    df = df[['site_url', 'title', 'text']]
-    df.reset_index(drop = 'index', inplace=True)
-    df.drop('site_url', axis=1, inplace=True)
-    df['label'] = 'FAKE'
-
-    #pickling df2
-    pickle_out = open('Data/df2.pickle', 'wb')
-    pickle.dump(df, pickle_out)
-    pickle_out.close()
-
-'''
 
 #grab_df1()
-grab_df2()
