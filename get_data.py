@@ -9,13 +9,14 @@ def grab_df1():
     #df.label.value_counts()
 
     #pickling def
-    pickle_out = open('df1.pickle', 'wb')
+    pickle_out = open('Data/df1.pickle', 'wb')
     pickle.dump(df, pickle_out)
     pickle_out.close()
 
+'''
 def grab_df2():
     #grabbing dataset2
-    df = pd.read_csv("fake.csv")
+    df = pd.read_csv("Data/fake.csv")
 
     l = []
     for i in range(len(df.text)):
@@ -32,11 +33,11 @@ def grab_df2():
     df['label'] = 'FAKE'
 
     #pickling df2
-    pickle_out = open('df2.pickle', 'wb')
+    pickle_out = open('Data/df2.pickle', 'wb')
     pickle.dump(df, pickle_out)
     pickle_out.close()
-    
 
+'''
 
 #grab_df1()
 grab_df2()
